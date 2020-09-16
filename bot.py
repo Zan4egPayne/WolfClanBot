@@ -62,7 +62,7 @@ async def team(ctx):
     em5 = discord.Embed(title="Наша команда".format(ctx.guild.name), description="", color=0x8a8c8f)
     em5.set_author(name="25/25")
     em5.add_field(name="Создатели", value='Zan4eg#5557 \n ! ЗОВУТ ВОЛОДЯ#9279', inline=True)
-    em5.add_field(name="Волки", value='Кто-то#9656 \n XackerPro#7001 \n Бафик#7356 \n 𝓓𝓪𝓝𝓲𝓬𝓱 シ#9592 \n Егорну#5104', inline=True)    
+    em5.add_field(name="Волки", value='Fleyer#7650 \n XackerPro#7001 \n Бафик#7356 \n 𝓓𝓪𝓝𝓲𝓬𝓱 シ#9592 \n Егорну#5104', inline=True)    
     embeds = [em1, em2, em3, em4, em5]
 
     message = await ctx.send(embed=em1)
