@@ -69,6 +69,14 @@ async def team(ctx):
     page = pag(Bot, message, only=ctx.author, use_more=False, embeds=embeds)
     await page.start()
 
+@Bot.command()
+async def whitelist(ctx, nick = None):
+    channel = client.get_channel( 755862633172959283 )
+    if nick is None:
+        await ctx.send(f"**{ctx.author}**, укажите ник сервера майнкрафт \n Пример команды: ***m.whitelist ``Ник``***")
+    else:
+        await channel.send( 'whitelist add' nick )
+    
 # Навигация по командам
 @Bot.command( pass_context = True )
 async def help( ctx, amount = 1 ):
