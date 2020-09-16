@@ -68,15 +68,6 @@ async def team(ctx):
     message = await ctx.send(embed=em1)
     page = pag(Bot, message, only=ctx.author, use_more=False, embeds=embeds)
     await page.start()
-
-@Bot.command()
-async def whitelist(ctx, nick = None):
-    channel = Bot.get_channel( 755862633172959283 )
-    if nick is None:
-        await ctx.send(f"**{ctx.author}**, укажите ник сервера майнкрафт \n Пример команды: ***m.whitelist ``Ник``***")
-    else:
-        await channel.send( 'whitelist add ' + nick )
-        await ctx.send('Игрок под ником: ' + nick + ' был добавлен в вайтлист.')
     
 # Навигация по командам
 @Bot.command( pass_context = True )
@@ -86,6 +77,7 @@ async def help( ctx, amount = 1 ):
     emb1=discord.Embed( title = 'Навигация по командам :pushpin:', colour= 0x8a8c8f )
     emb1.add_field( name = '``{}ping``'.format( PREFIX ), value = 'Узнать пинг бота.' )
     emb1.add_field( name = '``{}team``'.format( PREFIX ), value = 'Узнать состав нашей команды.' )
+    emb1.add_field( name = '``{}whitelist``'.format( PREFIX ), value = 'Добавить себя в вайтлист сервера тренировок.' )
     embeds = [emb1]
 
     message = await ctx.send(embed=emb1)
