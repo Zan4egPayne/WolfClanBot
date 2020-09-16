@@ -74,7 +74,7 @@ async def team(ctx):
 async def help( ctx, amount = 1 ):
     await ctx.channel.purge( limit = amount )
     
-    emb1=discord.Embed( title = 'Навигация по командам :pushpin:', colour= 0x31f5f5 )
+    emb1=discord.Embed( title = 'Навигация по командам :pushpin:', colour= 0x8a8c8f )
     emb1.add_field( name = '``{}ping``'.format( PREFIX ), value = 'Узнать пинг бота.' )
     emb1.add_field( name = '``{}team``'.format( PREFIX ), value = 'Узнать состав нашей команды.' )
     embeds = [emb1]
